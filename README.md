@@ -2,7 +2,7 @@
 
 GitHub uses its own Markup library to render files like READMEs. It supports:
   langages:
-
+```
     Markdown
     Textile
     RDoc
@@ -12,16 +12,15 @@ GitHub uses its own Markup library to render files like READMEs. It supports:
     Restructured Text
     AsciiDoc
     Perl Pod
-    
+ ```
   image format:
+  ```
     PNG, 
     JPG, 
     GIF, 
     PSD,  
     SVG
-
-
-
+```
 github actions: 
 
 ```
