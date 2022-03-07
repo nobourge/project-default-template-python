@@ -1,5 +1,26 @@
 # project-default-template
 
+GitHub uses its own Markup library to render files like READMEs. It supports:
+  langages:
+
+    Markdown
+    Textile
+    RDoc
+    Org
+    Creole
+    MediaWiki
+    Restructured Text
+    AsciiDoc
+    Perl Pod
+    
+  image format:
+    PNG, 
+    JPG, 
+    GIF, 
+    PSD,  
+    SVG
+
+
 
 github actions: 
 
@@ -18,5 +39,8 @@ jobs:
           excluded_paths: "ignore,.github"
           
 ![Visualization of the repository visualizer diagram](./diagram.svg)
+
+"![Visualization of the repository visualizer diagram](./diagram.svg)"
+
 
 
