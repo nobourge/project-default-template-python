@@ -24,6 +24,7 @@ GitHub uses its own Markup library to render files like READMEs. It supports:
 
 github actions: 
 
+´´´
 name: Create repository visualizer diagram
 on:
   push
@@ -37,6 +38,7 @@ jobs:
         uses: githubocto/repo-visualizer@0.7.1
         with:
           excluded_paths: "ignore,.github"
+´´´
           
 ![Visualization of the repository visualizer diagram](./diagram.svg)
 
