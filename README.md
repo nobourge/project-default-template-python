@@ -86,6 +86,7 @@ jobs:
 ```
 
 ### commit artifact to repository
+https://gitlab.com/jasonrwang/dissertation-tudelft-latex/
 
 ```
 
