@@ -84,3 +84,39 @@ jobs:
 ```
 
 ```
+
+### commit artifact to repository
+
+```
+
+build:
+  image: ctornau/latex
+  stage: build
+  script:
+    - latexmk -pdf -pdflatex="xelatex -interaction=nonstopmode" -use-make *.tex
+  artifacts:
+    when: on_success
+    paths:
+      - ./*.pdf
+    expire_in: 5 min # might not need this if deploy works
+
+
+deploy:
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
+    - eval `ssh-agent -s`
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh key
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - git config --global user.email "${CI_EMAIL}"
+    - git config --global user.name "${CI_USERNAME}"
+    - git add -f *.pdf # Force add PDF since we .gitignored it
+    - git commit -m "Compiled PDF from $CI_COMMIT_SHORT_SHA [skip ci]" || echo "No changes, nothing to commit!"
+    - git remote rm origin && git remote add origin git@gitlab.com:$CI_PROJECT_PATH.git
+    - git push origin HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
+    ```
+    
