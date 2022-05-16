@@ -21,6 +21,16 @@ GitHub uses its own Markup library to render files like READMEs. It supports:
     PSD,  
     SVG
 ```
+
+
+### table
+```
+title1           |  title2
+:-------------------------:|:-------------------------:
+cell1| cell2
+  ```
+  
+  
 ## github actions: 
 
 ### Create repository visualizer diagram
@@ -45,6 +55,8 @@ jobs:
 ```
 
 ![Visualization of the repository visualizer diagram](./diagram.svg)
+
+
 
 
 ### latex-pandoc-docx
