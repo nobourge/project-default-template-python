@@ -1,5 +1,7 @@
 # project-default-template
 
+![Visualization of the repository visualizer diagram](./diagram.svg)
+
 GitHub uses its own Markup library to render files like READMEs. It supports:
   langages:
 ```
@@ -58,7 +60,6 @@ jobs:
 ![Visualization of the repository visualizer diagram](./diagram.svg)
 ```
 
-![Visualization of the repository visualizer diagram](./diagram.svg)
 
 
 
