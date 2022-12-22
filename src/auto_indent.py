@@ -8,7 +8,7 @@ class AutoIndent(object):
         self.offset = 0
         self.frame_cache = {}
 
-    def flush(self): 
+    def flush(self):
         pass
 
     def indent_level(self):
