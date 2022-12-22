@@ -1,4 +1,4 @@
-name: Create repository visualizer diagram
+name: repositoryDiagram
 on:
   push
 jobs:
