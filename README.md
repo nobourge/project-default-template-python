@@ -136,6 +136,7 @@ deploy:
     - git commit -m "Compiled PDF from $CI_COMMIT_SHORT_SHA [skip ci]" || echo "No changes, nothing to commit!"
     - git remote rm origin && git remote add origin git@gitlab.com:$CI_PROJECT_PATH.git
     - git push origin HEAD:$CI_COMMIT_REF_NAME # Pushes to the same branch as the trigger
-    ```
+```
+    
 ## discord webhook
 https://gist.github.com/SGTGunner/50d6a3cc0d489cf779f77695ba3e22ea#:~:text=The%20Payload%20URL%20is%20the%20webhook%20URL%20with%20/github%20added%20to%20the%20end.
